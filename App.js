@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import { StyleSheet, Image } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { NavigationContainer } from '@react-navigation/native';
-//import { Ionicons } from '@expo/vector-icons';
-import CustomDrawerContent from './components/customDrawerContent';
+import CustomDrawerContent from './navigation/customDrawerContent';
 import customContentOptions from './navigation/customDrawerOptions';
 
 import Colors from './constants/colors';

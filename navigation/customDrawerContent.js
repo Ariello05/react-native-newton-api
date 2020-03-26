@@ -5,6 +5,7 @@ import {
   DrawerItem,
 } from '@react-navigation/drawer';
 import Animated from 'react-native-reanimated';
+import Color from '../constants/colors';
 
 const CustomDrawerContent = ({ progress, ...rest }) => {
   const translateX = Animated.interpolate(progress, {
@@ -19,7 +20,7 @@ const CustomDrawerContent = ({ progress, ...rest }) => {
       </DrawerContentScrollView>
       <DrawerItem
         label="Back"
-        labelStyle={{ fontSize: 18, left: 15, color: 'orange' }}
+        labelStyle={{ fontSize: 18, left: 15, color: Color.primary }}
         style={{ alignSelf: 'flex-end' }}
         onPress={() => rest.navigation.closeDrawer()}
       ></DrawerItem>

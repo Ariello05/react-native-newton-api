@@ -1,5 +1,7 @@
+import Color from '../constants/colors';
+
 const customContentOptions = {
-  activeTintColor: 'orange',
+  activeTintColor: Color.primary,
   inactiveTintColor: '#ddd',
   labelStyle: { fontSize: 25 },
   itemStyle: {
