@@ -28,7 +28,6 @@ const SingleFunctionComponent = (props) => {
       <View style={styles.topView}>
         <View style={styles.mainView}>
           <TextInput
-            keyboardType={'numeric'}
             style={styles.functionInput}
             value={functionData}
             onChangeText={(text) => {
@@ -62,7 +61,6 @@ const styles = StyleSheet.create({
   },
   mainView: {
     flex: 1,
-    backgroundColor: Colors.white,
     alignItems: 'center',
     justifyContent: 'center',
     paddingBottom: 90,

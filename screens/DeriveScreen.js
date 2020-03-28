@@ -13,21 +13,20 @@ const fetchData = (arg, callback) => {
 const DeriveScreen = React.memo((props) => {
   return (
     <View style={styles.topView}>
-      <HeaderBar title="Derive!"></HeaderBar>
+      <HeaderBar navigation={props.navigation} title="Derive!"></HeaderBar>
       <SingleFunctionComponent {...props} functionApiCall={fetchData} />
     </View>
   );
 });
 
 DeriveScreen.propTypes = {
-  functionHandler: PropTypes.func.isRequired,
+  onChangeFunctionHandler: PropTypes.func.isRequired,
   functionData: PropTypes.string.isRequired,
+  navigation: PropTypes.object.isRequired,
 };
 
 const styles = StyleSheet.create({
-  topView: {
-    flex: 1,
-  },
+  topView: { flex: 1, flexDirection: 'column' },
 });
 
 export default DeriveScreen;
