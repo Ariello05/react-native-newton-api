@@ -45,8 +45,6 @@ const styles = StyleSheet.create({
     height: 80,
     backgroundColor: Colors.accent,
     flexDirection: 'row',
-    paddingLeft: 15,
-    paddingRight: 15,
     borderRadius: 1,
   },
   headerContainer: {
