@@ -6,6 +6,7 @@ import PropTypes from 'prop-types';
 import HeaderBar from '../components/HeaderBar';
 import Line from '../components/Line';
 import { LinearGradient } from 'expo-linear-gradient';
+import Gradients from '../constants/gradients';
 
 import { View, StyleSheet, Image, Text } from 'react-native';
 
@@ -18,7 +19,7 @@ const IntegralScreen = React.memo((props) => {
     <View style={styles.topView}>
       <HeaderBar navigation={props.navigation} title="Integrate!"></HeaderBar>
       <LinearGradient
-        colors={['#fff', '#bbb', '#aaa']}
+        colors={Gradients.whiteGradient}
         style={styles.linearGradient}
       >
         <View style={styles.integralHeader}>
@@ -52,7 +53,6 @@ IntegralScreen.propTypes = {
 const styles = StyleSheet.create({
   topView: {
     flex: 1,
-    backgroundColor: '#f00',
   },
   linearGradient: {
     flex: 1,

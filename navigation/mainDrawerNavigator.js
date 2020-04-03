@@ -6,7 +6,6 @@ import CustomDrawerContent from './customDrawerContent';
 import customContentOptions from './customDrawerOptions';
 import PropTypes from 'prop-types';
 
-import Colors from '../constants/colors';
 import IntegralScreen from '../screens/IntegralScreen';
 import DeriveScreen from '../screens/DeriveScreen';
 
@@ -75,7 +74,7 @@ MainDrawerNavigator.propTypes = {
 
 const styles = StyleSheet.create({
   drawerView: {
-    backgroundColor: 'transparent', //?
+    //backgroundColor: 'transparent', //?
     width: 240,
   },
 });

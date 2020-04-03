@@ -8,7 +8,8 @@ import Animated from 'react-native-reanimated';
 import Color from '../constants/colors';
 import { LinearGradient } from 'expo-linear-gradient';
 import { StyleSheet } from 'react-native';
-import Colors from '../constants/colors';
+import PropTypes from 'prop-types';
+import Gradients from '../constants/gradients';
 
 const CustomDrawerContent = ({ progress, ...rest }) => {
   const translateX = Animated.interpolate(progress, {
@@ -17,27 +18,43 @@ const CustomDrawerContent = ({ progress, ...rest }) => {
   });
 
   return (
-    <Animated.View style={{ flex: 1, transform: [{ translateX }] }}>
-      <LinearGradient colors={['#333', '#222']} style={styles.linearGradient}>
+    <Animated.View style={{ ...styles.mainView, transform: [{ translateX }] }}>
+      <LinearGradient
+        colors={Gradients.drawerGradient}
+        style={styles.linearGradient}
+      >
         <DrawerContentScrollView {...rest}>
           <DrawerItemList {...rest} />
         </DrawerContentScrollView>
         <DrawerItem
           label="Back"
-          labelStyle={{ fontSize: 18, left: 15, color: Color.primary }}
-          style={{ alignSelf: 'flex-end' }}
+          labelStyle={styles.backButtonLabel}
+          style={styles.backButton}
           onPress={() => rest.navigation.closeDrawer()}
         ></DrawerItem>
       </LinearGradient>
     </Animated.View>
   );
 };
+CustomDrawerContent.propTypes = {
+  progress: PropTypes.func.isRequired,
+};
 
 const styles = StyleSheet.create({
   linearGradient: {
     flex: 1,
-
     borderRadius: 1,
+  },
+  mainView: {
+    flex: 1,
+  },
+  backButtonLabel: {
+    fontSize: 18,
+    left: 15,
+    color: Color.primary,
+  },
+  backButton: {
+    alignSelf: 'flex-end',
   },
 });
 

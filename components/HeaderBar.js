@@ -4,11 +4,12 @@ import { Ionicons } from '@expo/vector-icons';
 import PropTypes from 'prop-types';
 import Colors from '../constants/colors';
 import { LinearGradient } from 'expo-linear-gradient';
+import Gradients from '../constants/gradients';
 
 const HeaderBar = (props) => {
   return (
     <LinearGradient
-      colors={['#1F1F87', '#1C2D67']}
+      colors={Gradients.headerGradient}
       style={styles.linearGradient}
     >
       <View style={styles.headerLeftIcon}>
@@ -50,12 +51,6 @@ const styles = StyleSheet.create({
   headerContainer: {
     flex: 1,
     paddingRight: 45,
-  },
-  topBar: {
-    paddingTop: 30,
-    height: 80,
-    backgroundColor: Colors.accent,
-    flexDirection: 'row',
   },
   headerLeftIcon: {
     marginLeft: 10,
