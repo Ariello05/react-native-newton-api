@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   linearGradient: {
+    top: 2,
     flex: 1,
     paddingLeft: 15,
     paddingRight: 15,

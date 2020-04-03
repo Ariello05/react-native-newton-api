@@ -1,5 +1,5 @@
 export default {
   whiteGradient: ['#fff', '#bbb', '#aaa'],
-  headerGradient: ['#10102E', '#0A0A59'],
-  drawerGradient: ['#10102F', '#101014'],
+  headerGradient: ['#F5C400', '#A88700'],
+  drawerGradient: ['#333', '#222'],
 };

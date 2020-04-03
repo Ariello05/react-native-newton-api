@@ -47,6 +47,8 @@ const styles = StyleSheet.create({
     backgroundColor: Colors.accent,
     flexDirection: 'row',
     borderRadius: 1,
+    elevation: 5,
+    marginBottom: 1,
   },
   headerContainer: {
     flex: 1,
