@@ -74,7 +74,7 @@ MainDrawerNavigator.propTypes = {
 
 const styles = StyleSheet.create({
   drawerView: {
-    //backgroundColor: 'transparent', //?
+    backgroundColor: 'transparent', //?
     //width: 240,
   },
 });

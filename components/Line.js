@@ -19,10 +19,12 @@ const styles = StyleSheet.create({
     borderWidth: 1,
     color: '#333',
     opacity: 0.2,
-    width: '95%',
+    width: '100%',
   },
   center: {
     alignItems: 'center',
+    width: '100%',
+    height: 2,
   },
 });
 
