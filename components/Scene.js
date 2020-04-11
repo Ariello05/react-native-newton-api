@@ -1,13 +1,13 @@
 import React from 'react';
 import { TouchableWithoutFeedback, Keyboard } from 'react-native';
 import PropTypes from 'prop-types';
-import HeaderBar from '../components/HeaderBar';
+import HeaderBar from './HeaderBar';
 import { LinearGradient } from 'expo-linear-gradient';
 import Gradients from '../constants/gradients';
 
 import { View, StyleSheet } from 'react-native';
 
-const SceneHoC = React.memo((props) => {
+const Scene = React.memo((props) => {
   return (
     <View style={styles.topView}>
       <HeaderBar navigation={props.navigation} title={props.title}></HeaderBar>
@@ -27,7 +27,7 @@ const SceneHoC = React.memo((props) => {
   );
 });
 
-SceneHoC.propTypes = {
+Scene.propTypes = {
   title: PropTypes.string.isRequired,
   navigation: PropTypes.object.isRequired,
   children: PropTypes.node,
@@ -54,4 +54,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default SceneHoC;
+export default Scene;

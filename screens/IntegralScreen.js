@@ -4,7 +4,7 @@ import Math_Function from '../constants/math_functions.js';
 import fetchFunction from '../api/fetchFunction';
 import PropTypes from 'prop-types';
 import Line from '../components/Line';
-import SceneHoC from '../components/SceneHoC';
+import Scene from '../components/Scene';
 
 import { View, StyleSheet, Image, Text } from 'react-native';
 import Color from '../constants/colors';
@@ -14,7 +14,7 @@ const fetchData = (arg, callback) => {
 
 const IntegralScreen = React.memo((props) => {
   return (
-    <SceneHoC title="Integral" navigation={props.navigation}>
+    <Scene title="Integral" navigation={props.navigation}>
       <View style={styles.integralHeader}>
         <Image
           // eslint-disable-next-line react-native/no-inline-styles
@@ -26,7 +26,7 @@ const IntegralScreen = React.memo((props) => {
       </View>
       <Line />
       <SingleFunctionComponent {...props} functionApiCall={fetchData} />
-    </SceneHoC>
+    </Scene>
   );
 });
 
