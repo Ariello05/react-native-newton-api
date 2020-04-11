@@ -88,8 +88,8 @@ const styles = StyleSheet.create({
   functionResult: {
     width: '90%',
     margin: 10,
-    height: 30,
-    borderBottomColor: Colors.accent,
+    height: 25,
+    borderBottomColor: Colors.gray,
     borderBottomWidth: 1,
   },
   updateStyle: {
@@ -104,6 +104,7 @@ const styles = StyleSheet.create({
   },
   inputCard: {
     backgroundColor: '#ccc',
+
     padding: 14,
     borderRadius: 5,
     alignItems: 'center',

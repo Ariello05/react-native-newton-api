@@ -5,6 +5,7 @@ import fetchFunction from '../api/fetchFunction';
 import PropTypes from 'prop-types';
 import HeaderBar from '../components/HeaderBar';
 import { View, StyleSheet } from 'react-native';
+import SceneHoC from '../components/SceneHoC';
 
 const fetchData = (arg, callback) => {
   return fetchFunction(Math_Function.derive, arg, callback);
@@ -12,10 +13,11 @@ const fetchData = (arg, callback) => {
 
 const DeriveScreen = React.memo((props) => {
   return (
-    <View style={styles.topView}>
-      <HeaderBar navigation={props.navigation} title="Derive!"></HeaderBar>
-      <SingleFunctionComponent {...props} functionApiCall={fetchData} />
-    </View>
+    <SceneHoC title="Derive" navigation={props.navigation}>
+      <View style={styles.topView}>
+        <SingleFunctionComponent {...props} functionApiCall={fetchData} />
+      </View>
+    </SceneHoC>
   );
 });
 

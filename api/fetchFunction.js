@@ -15,7 +15,7 @@ const fetchData = (method, arg, callback) => {
       callback(responseJson.result);
     })
     .catch((error) => {
-      console.error(error);
+      console.error(error); //alert
     });
 };
 
