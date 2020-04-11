@@ -31,7 +31,11 @@ const SingleFunctionComponent = (props) => {
   }, []);
 
   if (resultData !== '') {
-    resultView = <Text style={styles.functionResult}>{resultData}</Text>;
+    resultView = (
+      <View style={styles.outputView}>
+        <Text style={styles.functionResult}>{'F(x) = ' + resultData}</Text>
+      </View>
+    );
   }
 
   return (
@@ -83,33 +87,35 @@ const styles = StyleSheet.create({
     height: 30,
     borderBottomColor: Colors.accent,
     borderBottomWidth: 1,
+    fontSize: 22,
     textAlign: 'center',
   },
   functionResult: {
-    width: '90%',
+    width: 'auto',
     margin: 10,
-    height: 25,
-    borderBottomColor: Colors.gray,
-    borderBottomWidth: 1,
+    paddingVertical: 3,
+    fontSize: 14,
+    height: 'auto',
   },
   updateStyle: {
     width: 100,
     //alignSelf: 'flex-end',
     //paddingRight: 50,
   },
-  separator: {
-    height: 5,
-    marginTop: 30,
-    width: '100%',
-  },
   inputCard: {
-    backgroundColor: '#ccc',
-
+    backgroundColor: Colors.cardColor,
     padding: 14,
     borderRadius: 5,
     alignItems: 'center',
     elevation: 3,
     width: '100%',
+  },
+  outputView: {
+    paddingHorizontal: 30,
+    flexDirection: 'row',
+    alignItems: 'center',
+    alignContent: 'center',
+    justifyContent: 'center',
   },
 });
 

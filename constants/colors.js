@@ -4,4 +4,5 @@ export default {
   white: 'white',
   placeholder: '#888',
   gray: '#222',
+  cardColor: '#c3c0c0',
 };

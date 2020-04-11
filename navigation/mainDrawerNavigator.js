@@ -73,6 +73,7 @@ MainDrawerNavigator.propTypes = {
 };
 
 const styles = StyleSheet.create({
+  // eslint-disable-next-line react-native/no-color-literals
   drawerView: {
     backgroundColor: 'transparent', //?
     //width: 240,
