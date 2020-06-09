@@ -9,7 +9,6 @@ import {
 } from 'react-native';
 import PropTypes from 'prop-types';
 import Colors from '../constants/colors';
-import Line from '../components/Line';
 
 const SingleFunctionComponent = (props) => {
   const [resultData, setResult] = useState('');
